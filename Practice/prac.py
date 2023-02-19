@@ -193,3 +193,79 @@ for modification"""
 # obj_class3 = class3()
 # obj_class3.test_cls1()
 # obj_class3.test_cls2()
+
+"""Decorators : decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
+                 decorators helps when we have to do repeated work"""
+# def test2(func):
+#     print("start")
+#     func()
+#     print("End")
+# @test2
+# def test1():
+#     print(3+4)
+
+# t1 = test1()
+# t2 = test2(test1) or we can use @name of funct this method is known as decorator
+"""eg 2 decorators"""
+# import time
+# def timer_test(func):
+#     def timer_test():
+#         start  = time.time()
+#         func()
+#         end = time.time()
+#         print(f'start time {start}')
+#         print(f'end time {end}')
+#         print(f'time complexity {end-start}')
+#     return timer_test
+
+# @timer_test
+# def test():
+#     print("Task addition : ",10+29)
+# t1 = test()
+
+# @timer_test
+# def test1():
+#     print("task multiplication : " , 20*40)
+# t2 = test1()
+
+# @timer_test
+# def test2():
+#     print("task divide : ", 20/2)
+# t3 = test2()
+
+# @timer_test
+# def test3():
+#     for i in range(100000000):
+#         pass
+# t4 = test3()
+
+"""Class method : inbuilt method to pass data to variable directly to 
+                  class instead of using init method """
+
+#without class method
+# class stud():
+#     def __init__(self,name,email):
+#         self.name = name
+#         self.email = email
+#     def stud_details(self):
+#         print(self.name,self.email)
+
+# t1 = stud("123","123@gmail.com")
+# print(t1.name)
+# print(t1.email)
+# t1.stud_details()
+
+#with class method
+# class stud():
+#     def __init__(self,name,email):
+#         self.name = name
+#         self.email = email
+      
+#     @classmethod
+#     def details(cls,name,email):
+#         return cls(name,email)
+#     def stud_details(self):
+#         print(self.name,self.email)
+# t1 = stud.details("123","123@gmail.com")
+# print(t1.name)
+

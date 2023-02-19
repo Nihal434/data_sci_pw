@@ -80,3 +80,34 @@ family = {
 }
 print(family)
 """
+
+"""
+Q7. Using setdefault() method, create key named topics in the given dictionary and also add the value of
+the key as this list ['Python', 'Machine Learning’, 'Deep Learning']
+
+
+dict1 = {'language' : 'Python', 'course': 'Data Science Masters'}
+dict1.setdefault('Topics',['Python','Machine Learning', 'Deep Learning'])
+print(dict1)
+
+topics_list = list(dict1['Topics'])
+print(topics_list)
+
+"""
+
+"""
+Q8. What are the three view objects in dictionaries? Use the three in-built methods in python to display
+these three view objects for the given dictionary.
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+Ans : Three view objects in dictionaries are key,value and item
+
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+a= dict1.keys()
+# print(f'keys are {a}')
+print(a)
+b=dict1.values()
+print(b)
+c= dict1.items()
+print(c)
+"""
