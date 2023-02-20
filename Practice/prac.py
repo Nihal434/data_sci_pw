@@ -104,6 +104,9 @@ is done by double underscore before var declaration eg self.__var
 after making it private no one from outside can access it or modify it
 to give access of modification you have to define seprate method 
 for modification"""
+"""double underscore means private var
+   single underscore means protected var
+   no underscore means public var"""
 
 # class test():
 #     def __init__(self,a,b):
@@ -255,17 +258,91 @@ for modification"""
 # print(t1.email)
 # t1.stud_details()
 
-#with class method
-# class stud():
-#     def __init__(self,name,email):
-#         self.name = name
-#         self.email = email
-      
-#     @classmethod
-#     def details(cls,name,email):
-#         return cls(name,email)
-#     def stud_details(self):
-#         print(self.name,self.email)
-# t1 = stud.details("123","123@gmail.com")
-# print(t1.name)
+#class method
+"""class method directly provide var value to class itself instead of giving to 
+constructor (class method helps to modify class var directly)
+in real world class method is used to modify the class var it can be modify in other way too
+but its not a good practice"""
+# class car():
+#    base_price = 1000 #class var (var which is efined inside a class)
+#    def __init__(self,windows,doors,power):
+#       self.windows = windows
+#       self.doors = doors
+#       self.power = power
+#    def what_base_price(self):
+#       print(f'Base price is {self.base_price}')
 
+#    @classmethod
+#    def revise_base_price(cls,inflation):
+#       cls.base_price = cls.base_price + cls.base_price*inflation
+
+
+# car1 = car(4,4,200)
+# print(car1.base_price)
+# print(car.base_price) #class var can be call directly with class name or instance name
+# car.revise_base_price(0.10) #class method can be call with the help of instance(object) or directly with class name
+# print(car.base_price)
+
+"""if you want to add external function to class dynamically then class method is used
+syntax : class_name.funct_name = classmethod(func_name) 
+to delete func inside class use del class_name.func_name"""
+# def mileage(cls,mileage):  #external funct
+#    print("mileage" , mileage)
+# car.mileage = classmethod(mileage) #external funct adding to class
+# car.mileage(20)
+
+"""static method :Static methods in Python are extremely similar to python class level methods, the difference being that a static method is bound to a class rather than the objects for that class. 
+This means that a static method can be called without an object for that class. """
+#instance method
+# class stud():
+#     def stud_details(self,name,email,number):
+#         print(name,email,number)
+
+# test1 = stud()
+# test1.stud_details("123","123@gmail.com",123)
+
+# #static method : saves memory from memory which is occupied by repeated func
+# class stud():
+#     def stud_details(self,name,email,number):
+#         print(name,email,number)
+
+#     @staticmethod
+#     def mentor_list(men_list):
+#         print(men_list)
+
+# test2 = stud()
+# test2.mentor_list(["abc",'xyz'])
+
+"""Special method(magic/dunder) : predifined funct"""
+# a= 10
+# print(a+10)
+# print(a.__add__(10)) #addition using special method
+
+"""Property decorators : it exposed the property of decorator to outside """
+
+# class course():
+#     def __init__(self,course_price,course_name):
+#         self.__course_price = course_price
+#         self.course_name = course_name
+
+#     @property   #now price is accessible
+#     def price_access(self):
+#         return self.__course_price
+#     @price_access.setter # setter gives user access to modify the private var
+#     def course_price_set(self,price):
+#         self.__course_price = price
+#     @price_access.deleter #gives access to del private var
+#     def  course_price_del(self):
+#         del self.__course_price
+        
+
+# test = course(400,"abc")
+# print(test.course_name)
+# print(test._course__course_price)
+# print(test.price_access)
+# test.course_price_set = 500
+# print(test.price_access)
+# test.course_price_del
+# print(test.price_access)
+
+"""Files"""
