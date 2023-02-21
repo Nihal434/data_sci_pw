@@ -345,4 +345,56 @@ This means that a static method can be called without an object for that class. 
 # test.course_price_del
 # print(test.price_access)
 
-"""Files"""
+"""Files""" #if file code does not run here go for colab
+"""text file"""
+# f = open("test.txt",'w') #to create a text file, w is a type of file you can use other check by pressing tab
+
+# f.write("hello") #writing something in blabk file
+# f.close() #after writing in file you have to use close command in order to execute
+
+# data.seek(place)  #seek use to set thecursor at any place
+"""json file"""
+# data = {
+#     "name":'123',
+#     'email':'123@gmail.com',
+#     'contact_no.':1234,
+#     'subject':['abc','pqr','xyz']
+
+# }
+
+# import json #adding data to json file
+# with open('test1.json','w') as f:
+#     json.dump(data,f)
+
+# with open('test1.json','r') as f: #reading data from json file
+#   data1 = json.load(f)
+
+"""csv = comma seperated value in csv file data must be seperated by comma"""
+#writing comma seperated data in csv file where 1st row will be name of coulmns
+
+
+# data = [['name','email','number'],
+#         ['abc','abc@gmail.com',1234],
+#         ['pqr','pqr2gmail.com',5678]
+#         ]
+# import csv
+# with open('test3.csv','w') as f:
+#    w = csv.writer(f)
+#    for i in data:
+#       w.writerow(i)
+
+#reading data from csv
+
+# with open('test3.csv','r') as f:
+#     read = csv.reader(f)
+#     for i in read:print(i)
+
+"""binary file (image etc)"""
+#opening binary file
+# with open('test4.bin','wb') as f:
+#     f.write(b'\x01\x02\x03')
+
+# #reading bin value
+# with open('test4.bin','rb') as f:
+#     print(f.read())
+
