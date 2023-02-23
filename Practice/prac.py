@@ -398,3 +398,11 @@ This means that a static method can be called without an object for that class. 
 # with open('test4.bin','rb') as f:
 #     print(f.read())
 
+"""Logging and debugger : """
+# import logging
+# logging.basicConfig(filename= 'test.log',level = logging.INFO)
+
+"""module"""
+from Practice import prac2
+def prac():
+    print("hello from file prac")
