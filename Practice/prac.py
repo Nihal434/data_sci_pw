@@ -402,7 +402,144 @@ This means that a static method can be called without an object for that class. 
 # import logging
 # logging.basicConfig(filename= 'test.log',level = logging.INFO)
 
-"""module"""
-from Practice import prac2
-def prac():
-    print("hello from file prac")
+"""module : check example in pw file"""
+# from Practice import prac2
+# def prac():
+#     print("hello from file prac")
+
+"""Exception handling : """
+
+# f = open('test.txt','r') #after throwing error by this line remaining lines will not executed
+#so of you dont want to stop your remaing lines execution take take suspicious line inside try and except
+# try:
+#     f = open('test.txt','r')
+# except Exception as e:
+#     print('issue with my code',e)
+    
+# print('this is my file')
+
+# try:
+#     f = open('test.txt','w')
+#     f.write('this is msg')
+   
+# except Exception as e:
+#     print('issue with my code',e)
+
+# else:
+#     f.close()
+#     print('this block will execute once try will execute itself without exception')
+    
+# try:
+#     f = open('test1.txt','r')
+#     f.write('hello')
+# finally:
+#     print('this will always execute') #anything inside finally always execute while try block thorows error or not
+"""we can execute all thing together too"""
+# try:
+#     f = open('test.txt','w')
+#     f.write('this is msg')
+   
+# except Exception as e:
+#     print('issue with my code',e)
+
+# else:
+#     f.close()
+#     print('this block will execute once try will execute itself without exception')
+
+# finally:
+#     print('this will always execute')
+
+"""Custom Exception handling : exception like user entering negative age"""
+# class validateage(Exception):
+#     def __init__(self,msg):
+#         self.msg = msg
+
+# def validate_age(age):
+#     if age<0:
+#         raise validateage("age should not less than zero")
+#     elif age>200:
+#         raise validateage("age is too high")
+#     else:
+#         print('age is valid')
+
+# try:
+#     age = int(input('enter age : '))
+#     validate_age(age)
+# except validateage as e:
+#     print(e)
+
+"""genral exception"""
+# try:
+#     a= 10
+#     10/0
+# except ZeroDivisionError as e:
+#     print(e)
+
+# # try:
+# #     int('sudh')
+# # except TypeError as e:
+# #     print(e)
+
+# try:
+#     import hello
+# except ImportError as e:
+#     print(e)
+# try:
+#     'heel'.test()
+# except AttributeError as e:
+#     print(e)
+
+# try:
+#     l=[1,2,3,4]
+#     l[10]
+# except IndexError as e:
+#     print(e)
+
+"""Multithreading : 
+Multithreading allows the execution of multiple parts of a program at the same time. These parts are known as threads and are lightweight processes available within the process. 
+So multithreading leads to maximum utilization of the CPU by multitasking."""
+# import threading
+# def test(id):
+#     print('this is my test id %d' %id)
+# # test(10)
+# # test(20)
+# # test(30)
+
+# #following code snippet also gives the same result which would be given after 3 function call
+
+# thred = [threading.Thread(target=test,args = (i,)) for i in [10,20,30]]
+# thred 
+# for i in thred:
+#     i.start()
+
+"""importing data from file"""
+# import urllib.request
+# import threading
+# def file_download(url,filename):
+#     urllib.request.urlretrieve(url,filename)
+
+# #file_download('https://raw.githubusercontent.com/itsfoss/text-files/master/agatha.txt','test.txt')
+# url_list = [
+#     'https://raw.githubusercontent.com/itsfoss/text-files/master/agatha.txt',
+#     'https://raw.githubusercontent.com/itsfoss/text-files/master/sherlock.txt',
+#     'https://raw.githubusercontent.com/itsfoss/text-files/master/sample_log_file.txt'
+# ]
+
+# # print(url_list)
+# data_file_list = ['data1.txt','data2.txt','data3.txt']
+# thread1= [threading.Thread(target= file_download , args= (url_list[i],data_file_list[i])) for i in range(len(url_list))]
+# # threading.Thread(target=file_download, args = (url_list[i],data_file_list[i]) for i in range(len(url_list)))
+# for t in thread1:
+#     t.start() 
+
+# def test2(x):
+#     for i in range(10):
+#         print('test1 printing value of x %d and printing value of i %d ' %(x,i))
+
+# # test2(10)
+# """Now for exectuing same func for diffrent parameter will take so long
+# instead of this using threading we can run same prog consecutively in efficient manner"""
+
+# thread2 = [threading.Thread(target=test2, args=(i,)) for i in [100,20,10,30]]
+# for t in thread2:
+#     t.start()
