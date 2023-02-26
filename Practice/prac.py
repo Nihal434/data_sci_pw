@@ -543,3 +543,85 @@ So multithreading leads to maximum utilization of the CPU by multitasking."""
 # thread2 = [threading.Thread(target=test2, args=(i,)) for i in [100,20,10,30]]
 # for t in thread2:
 #     t.start()
+
+""" Multiprocessing :  
+
+"""
+import multiprocessing
+#eg 1
+# def test():
+#     print('this is multi programming func')
+
+# if __name__ == "__main__": #main method which act as oarent
+#     m=multiprocessing.Process(target = test)
+#     print('this is my main prog')
+#     m.start() #to start the multiprocessing
+#     m.join() #to join diff multiprocess
+
+#eg2
+# def sqr(n):
+#     return n**2
+
+# if __name__ == '__main__' :
+#     with multiprocessing.Pool(processes = 5) as pool:
+#         out = pool.map(sqr,[2,3,4,5,6])
+#         print(out)
+
+#eg3 : queue 
+# def producer(q):
+#     for i in ['a','b','c','d']:
+#         q.put(i)
+
+# def consumer(q):
+#     while True:
+#         item = q.get()
+#         if item is None:
+#             break
+#         print(item)
+
+# if __name__ == '__main__':
+#     queue = multiprocessing.Queue()
+#     m1  = multiprocessing.Process(target = producer,args = (queue,)) #enqueue
+#     m2 = multiprocessing.Process(target = consumer,args = (queue,))  #dequeue
+#     m1.start()
+#     m2.start()
+#     queue.put('xyz')
+#     m1.join()
+#     m2.join()
+
+# video have one more great eg which is at last
+
+"""Database : SQL """ 
+
+# import mysql.connector
+# # import mysql.connector
+# #create user 'user'@'%' identified by 'password'
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="abc",
+#   password="password"
+# )
+# print(mydb)
+# mycursor = mydb.cursor()
+# #till these everything will be common above syntax
+# mycursor.execute("SHOW DATABASES") #itvwill show current db avaiable
+# for x in mycursor:
+#   print(x)
+
+
+#syntax to create new table using python
+#1 create .py file and write following code
+
+# import mysql.connector
+# # import mysql.connector
+# #create user 'user'@'%' identified by 'password'
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="abc",
+#   password="password"
+# )
+# mycursor = mydb.cursor()
+# mycursor.execute('CREATE DATABASE if not exists test1')
+# mycursor.execute('CREATE TABLE  if not exists test1.test_table (c1 INT , c2 VARCHAR(50), c3 INT, c4 FLOAT);')
+#aboce line is to create table inside db test1
+# mydb.close() #mandatory to write close command
