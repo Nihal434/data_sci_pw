@@ -625,3 +625,32 @@ import multiprocessing
 # mycursor.execute('CREATE TABLE  if not exists test1.test_table (c1 INT , c2 VARCHAR(50), c3 INT, c4 FLOAT);')
 #aboce line is to create table inside db test1
 # mydb.close() #mandatory to write close command
+
+"""Connecting with mongodb
+1. create account(free)
+2.create server
+3.copy client prog and paste in compiler
+4. change password from url to which you have set in mongo server"""
+
+# import pymongo
+
+# client = pymongo.MongoClient("mongodb+srv://username:<Password123>@cluster0.rja1xrb.mongodb.net/?retryWrites=true&w=majority")
+# db = client.test
+# connection have done with db
+#check download
+
+"""web api : it is a subset of api ,application programming interface using https is web api
+data send and receive through http protocol  
+
+reat and soap archi : 
+rest : representational state transfer used http protocol
+soap : simple object access protocol use tcp,smtp prtocol
+
+both used to create api
+
+
+"""
+
+
+
+
