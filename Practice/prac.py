@@ -652,5 +652,89 @@ both used to create api
 """
 
 
+# class node():
+#     def __init__(self,data = None):
+#         self.data = data
+#         self.next = None
+
+# class llist():
+#     def __init__(self):
+#         self.head = None
+
+#     def detect(self):
+#         slow = self.head
+#         fast = self.head
+#         flag = 0
+#         while (slow and fast and fast.next):
+#             if slow ==fast and flag!=0:
+#                 count=1
+#                 slow = slow.next
+#                 while(slow!=fast):
+#                     slow = slow.next
+#                     count+=1
+#                 print(count)
+#                 break
+#             slow = slow.next
+#             fast = fast.next.next
+#             flag = 1
+#             # print(count)
+#             if slow == fast:
+#                 print("loop")
+#                 break
+   
+#    #  def printlist(self):
+#    #      printval = self.head
+#    #      while printval is not None:
+#    #          print(printval.data)
+#    #          printval = printval.next
+
+    
+   
+   
 
 
+
+
+# list1 = llist()
+# list1.head = node("mon")
+# e2 = node('tue')
+# e3 = node('wed')
+# list1.head.next = e2
+# e2.next = e3
+# e3.next = list1.head
+# list1.detect()
+
+class node():
+    def __init__(self,data = None):
+        self.data = data
+        self.next = None
+    
+class llist():
+    def __init__(self):
+        self.head = None
+
+    def detect(self):
+        slow = self.head
+        fast = self.head
+        while slow!=fast :
+            print('hello')
+            slow = slow.next
+            fast = fast.next.next
+
+    # def printlist(self):
+    #     printval = self.head
+    #     while printval!=None:
+    #         print(printval.data)
+    #         printval = printval.next
+
+
+
+list1 = llist()
+list1.head = node("1")
+e2 = node('2')
+list1.head.next = e2
+e3 = node('3')
+e2.next = e3
+e3.next = e2
+
+list1.detect()

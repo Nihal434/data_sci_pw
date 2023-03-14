@@ -1,4 +1,10 @@
 #hello
+"""
+step1  = create folder and open vs code
+stp2 = open terminal and type : py-3 -m venv .venv , to create virtual env
+stp3 = now run : .venv\scripts\activate , to activate virtual env
+stp4 = select python interpreter when your using 1st time ctrl+shift+P
+"""
 # to enter in virtual env enter in terminal .venv\scripts\activate and make sure you are working in flask project directory
 from flask import Flask 
 from flask import request
@@ -20,6 +26,11 @@ def  request_input():      #to take input from url we have to write ? followed b
     data= request.args.get('x')
     return  "this is my input from url {}".format(data)
 
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
+
+"""we can get the data through get as well as post method get method is public while post method is more secure than get method
+e.g of get is google search
+e.g of post is entering data in mail
+"""
