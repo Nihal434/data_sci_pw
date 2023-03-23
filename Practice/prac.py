@@ -651,7 +651,7 @@ both used to create api
 
 """
 
-
+"""linked list"""
 # class node():
 #     def __init__(self,data = None):
 #         self.data = data
@@ -704,37 +704,48 @@ both used to create api
 # e3.next = list1.head
 # list1.detect()
 
-class node():
-    def __init__(self,data = None):
-        self.data = data
-        self.next = None
+# class node():
+#     def __init__(self,data = None):
+#         self.data = data
+#         self.next = None
     
-class llist():
-    def __init__(self):
-        self.head = None
+# class llist():
+#     def __init__(self):
+#         self.head = None
 
-    def detect(self):
-        slow = self.head
-        fast = self.head
-        while slow!=fast :
-            print('hello')
-            slow = slow.next
-            fast = fast.next.next
+#     def detect(self):
+#         slow = self.head
+#         fast = self.head
+#         while slow!=fast :
+#             print('hello')
+#             slow = slow.next
+#             fast = fast.next.next
 
-    # def printlist(self):
-    #     printval = self.head
-    #     while printval!=None:
-    #         print(printval.data)
-    #         printval = printval.next
+#     # def printlist(self):
+#     #     printval = self.head
+#     #     while printval!=None:
+#     #         print(printval.data)
+#     #         printval = printval.next
 
 
 
-list1 = llist()
-list1.head = node("1")
-e2 = node('2')
-list1.head.next = e2
-e3 = node('3')
-e2.next = e3
-e3.next = e2
+# list1 = llist()
+# list1.head = node("1")
+# e2 = node('2')
+# list1.head.next = e2
+# e3 = node('3')
+# e2.next = e3
+# e3.next = e2
 
-list1.detect()
+# list1.detect()
+
+
+"""Pandas : run on lab
+Why Use Pandas? Pandas allows us to analyze big data and make conclusions based on statistical theories. Pandas can clean messy data sets,
+ and make them readable and relevant. Relevant data is very important in data science."""
+
+import pandas as pd  
+#we can use anything as a alias in this case we have taken pd
+ab=pd.read_csv('services.csv') #reading a csv file we can read any structured file
+#pandas by default consider first row as a column name or header
+print(ab)
