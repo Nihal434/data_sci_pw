@@ -197,7 +197,7 @@ for modification"""
 # obj_class3.test_cls1()
 # obj_class3.test_cls2()
 
-"""Decorators : decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
+"""Decorators : decorator is a function that takes another function and extends the behavior of the later function without explicitly modifying it.
                  decorators helps when we have to do repeated work"""
 # def test2(func):
 #     print("start")
@@ -264,7 +264,7 @@ constructor (class method helps to modify class var directly)
 in real world class method is used to modify the class var it can be modify in other way too
 but its not a good practice"""
 # class car():
-#    base_price = 1000 #class var (var which is efined inside a class)
+#    base_price = 1000 #class var (var which is defined inside a class)
 #    def __init__(self,windows,doors,power):
 #       self.windows = windows
 #       self.doors = doors
@@ -547,7 +547,7 @@ So multithreading leads to maximum utilization of the CPU by multitasking."""
 """ Multiprocessing :  
 
 """
-import multiprocessing
+#import multiprocessing
 #eg 1
 # def test():
 #     print('this is multi programming func')
