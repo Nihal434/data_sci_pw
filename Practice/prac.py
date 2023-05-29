@@ -552,7 +552,7 @@ So multithreading leads to maximum utilization of the CPU by multitasking."""
 # def test():
 #     print('this is multi programming func')
 
-# if __name__ == "__main__": #main method which act as oarent
+# if __name__ == "__main__": #main method which act as parent
 #     m=multiprocessing.Process(target = test)
 #     print('this is my main prog')
 #     m.start() #to start the multiprocessing
