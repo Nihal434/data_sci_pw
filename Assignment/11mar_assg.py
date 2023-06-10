@@ -99,6 +99,23 @@ Ans:
 Q11. In a survey of 500 people, 65% reported being satisfied with their current job. Calculate the 95%
 confidence interval for the true proportion of people who are satisfied with their job.
 Ans:
+CI = 0.65 ± 1.96 * sqrt((0.65 * (1 - 0.65)) / 500)
+
+CI = 0.65 ± 1.96 * sqrt((0.65 * 0.35) / 500)
+
+CI = 0.65 ± 1.96 * sqrt(0.22775 / 500)
+
+CI = 0.65 ± 1.96 * sqrt(0.0004555)
+
+CI = 0.65 ± 1.96 * 0.021355
+
+CI = 0.65 ± 0.041878
+
+The 95% confidence interval for the true proportion of people who are satisfied with their job is approximately:
+
+CI = (0.608122, 0.691878)
+
+Therefore, we can say with 95% confidence that the true proportion of people who are satisfied with their job falls between 60.81% and 69.19%.
 
 """
 """
@@ -118,8 +135,66 @@ Ans:
     n2= number of observations in group 
 
     t = (85-82)/sqrt{[(6)^2/n1]+[(5)^2/n2]}
+
+    Sample size is not given
 """
 
 """
+Q13. A population has a mean of 60 and a standard deviation of 8. A sample of 50 observations has a mean
+of 65. Calculate the 90% confidence interval for the true population mean.
+Ans:
+    Confidence Interval = sample mean ± (critical value * standard deviation / square root of sample size)
+    Sample mean (x̄) = 65
+    Standard deviation (σ) = 8
+    Sample size (n) = 50
+    Critical value (z) = 1.645
 
+    Confidence Interval = 65 ± (1.645 * 8 / √50)
+
+    Calculating the square root of 50 (√50) gives us approximately 7.071.
+
+    Confidence Interval = 65 ± (1.645 * 8 / 7.071)
+
+    Simplifying further:
+
+    Confidence Interval = 65 ± (1.845 / 7.071)
+
+    Confidence Interval = 65 ± 0.2609
+
+    Thus, the 90% confidence interval for the true population mean is approximately (64.7391, 65.2609).
+
+"""
+
+"""
+Q14. In a study of the effects of caffeine on reaction time, a sample of 30 participants had an average
+reaction time of 0.25 seconds with a standard deviation of 0.05 seconds. Conduct a hypothesis test to
+determine if the caffeine has a significant effect on reaction time at a 90% confidence level using a t-test.
+
+Ans:
+Step 1: State the null hypothesis (H0) and alternative hypothesis (Ha):
+
+Null hypothesis (H0): Caffeine has no significant effect on reaction time.
+Alternative hypothesis (Ha): Caffeine has a significant effect on reaction time.
+Step 2: Determine the significance level (α). In this case, the confidence level is 90%, so the significance level is 1 - 0.90 = 0.10.
+
+Step 3: Compute the test statistic:
+
+Given sample mean (x̄) = 0.25 seconds
+Given sample standard deviation (s) = 0.05 seconds
+Given sample size (n) = 30
+Since the population standard deviation (σ) is unknown, we'll use the t-test formula:
+t = (x̄ - μ) / (s / √n)
+
+Where μ is the population mean.
+
+Step 4: Determine the critical value based on the significance level and degrees of freedom. Since we have a sample size of 30, the degrees of freedom are n - 1 = 30 - 1 = 29. We can refer to the t-distribution table or use statistical software to find the critical value.
+
+For a 90% confidence level and 29 degrees of freedom, the critical value is approximately ±1.699.
+
+Step 5: Calculate the test statistic:
+t = (0.25 - μ) / (0.05 / √30)
+
+Step 6: Compare the absolute value of the test statistic to the critical value.
+|t| > critical value, reject the null hypothesis.
+|t| ≤ critical value, fail to reject the null hypothesis.
 """
